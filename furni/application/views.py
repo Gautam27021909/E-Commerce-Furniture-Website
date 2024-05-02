@@ -31,7 +31,7 @@ def register(request):
 
    
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html' ,{"nbar": index})
     
 def about(request):
     return render(request, 'about.html')
@@ -130,8 +130,6 @@ def placeorder(request):
     cart_item.save()
     return redirect('thankyou')
 
-# def logout(request):
-#     return redirect("login")
 
 def Login(request):
     if request.method=="POST":
